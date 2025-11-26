@@ -28,8 +28,7 @@ class Post:
         print(f"\tUserID: {self.userID}")
         
         
-        
-
+    
     def HasPostedToday(self):
         url = self.API_URL + "/tweets/counts/recent"
         
@@ -41,10 +40,3 @@ class Post:
     def Post(self):
         pass
     
-    
-def main():
-    p = Post("")
-
-
-
-main()
