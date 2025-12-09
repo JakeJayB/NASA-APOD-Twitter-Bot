@@ -18,4 +18,8 @@ def main():
     if any(token is None or token == "" for token in [X_BEARER_TOKEN, X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_SECRET, NASA_APOD_KEY]):
         raise Exception("One or more API credentials missing in .env file!")
     
+    
+    n = NasaAPI.Extract(NASA_APOD_KEY)
+    apod_data = n.GetAPOD()
+    
 main()
