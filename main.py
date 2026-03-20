@@ -1,0 +1,15 @@
+from NasaAPI import get_apod
+from config import environment
+
+
+def main():
+    apod_data = get_apod(environment.NASA_APOD_KEY)
+
+    if apod_data["media_type"] != "image":
+        print("Today's APOD is a video. Skipping...")
+        return
+
+    print(apod_data)
+
+
+main()
